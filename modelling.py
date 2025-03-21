@@ -13,15 +13,11 @@ import plotting
 
 def RunLogit(target,features,target_out,features_out):
 
-    '''FS_selected_features = FSActiveSet(target,features)
-    plotting.PlotCorrelationMatrix(FS_selected_features, title='Pruned Feature Correlations')
-    CrossValidateLogit(target,features)'''
 
-    '''C_space = np.linspace(start=0.1,stop=0.01,num=15)
-    l1_space = np.linspace(start=0,stop=0.5,num=10)'''
 
-    C_space = [0.09357142857142858]
-    l1_space = [0.16666666666666666]
+    C_space = np.linspace(start=0.1,stop=0.01,num=15)
+    l1_space = np.linspace(start=0,stop=0.5,num=10)
+
 
     c,l1_ratio = OptimiseLogit(target,features,C_space,l1_space)
 
